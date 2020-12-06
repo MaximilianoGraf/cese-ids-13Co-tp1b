@@ -39,8 +39,25 @@ typedef struct alumno_s {
 
 /*=====[Prototypes (declarations) of public functions]=======================*/
 
+/*!
+*@brief Convierte una constante con los datos de un alumno en una cadena de caracteres.
+*
+*@param[in] cadena: cadena de caracteres que se completará con los datos del alumno.
+*@param[in] espacio: tamaño de la cadena en bytes.
+*@param[in] alumno: la constante alumno_t con los datos del alumno
+*
+*@return int, > 0 Ok, <= 0 error.
+*/
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno);
 
+/*!
+*@brief Convierte el arreglo ALUMNOS en una cadena JSON.
+*
+*@param[in] cadena: cadena de caracteres que se completará con los datos de los alumnos.
+*@param[in] espacio: tamaño de la cadena en bytes.
+*
+*@return int, > 0 Ok, <= 0 error.
+*/
 bool SerializarAlumnos(char * cadena, size_t espacio);
 
 /*=====[Prototypes (declarations) of public interrupt functions]=============*/
